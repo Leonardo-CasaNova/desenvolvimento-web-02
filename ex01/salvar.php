@@ -11,27 +11,32 @@ $get = $_GET;
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dados recebidos</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Dados da requisição</h1>
+    <div>
+        <h1>Dados da requisição</h1>
 
-    <p><strong>Método:</strong> <?php echo htmlspecialchars($method); ?></p>
+        <p><strong>Método:</strong> <?php echo htmlspecialchars($method); ?></p>
 
-    <h2>Dados enviados (POST)</h2>
+        <h2>Dados enviados (POST)</h2>
         <ul>
             <li><?php print_r($post); ?></li>
-    </ul>
+        </ul>
 
-    <h2>Dados enviados (GET)</h2>
+        <h2>Dados enviados (GET)</h2>
         <ul>
             <li><?php print_r($get); ?></li>
         </ul>
 
-    <h2>Cabeçalhos HTTP</h2>
+        <h2>Cabeçalhos HTTP</h2>
         <ul>
             <li><?php print_r($headers); ?></li>
         </ul>
+        
+        <a href="index.html">Voltar ao formulário</a>
+    </div>
 </body>
 </html>
